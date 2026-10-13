@@ -34,6 +34,10 @@ export function Nav() {
 
   useEffect(() => {
     if (!menuOpen) return;
+    const desktop = window.matchMedia('(min-width: 1024px)');
+    if (desktop.matches) { setMenuOpen(false); return; }
+    const onDesktopChange = () => { if (desktop.matches) setMenuOpen(false); };
+    desktop.addEventListener('change', onDesktopChange);
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     const toggle = document.getElementById('nexus-menu-toggle');
@@ -52,7 +56,8 @@ export function Nav() {
     return () => {
       document.body.style.overflow = previousOverflow;
       document.removeEventListener('keydown', onKeyDown);
-      if (toggle?.isConnected) toggle.focus();
+      desktop.removeEventListener('change', onDesktopChange);
+      if (!desktop.matches && toggle?.isConnected && toggle.getClientRects().length) toggle.focus();
     };
   }, [menuOpen]);
 
