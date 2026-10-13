@@ -142,10 +142,10 @@ export default function ContactPage() {
 										</svg>
 									</div>
 									<h3 className="text-2xl font-black text-white mb-3" style={{ letterSpacing: '-0.03em' }}>
-										Message received!
+										Demo message complete.
 									</h3>
 									<p style={{ color: 'rgba(255,255,255,0.45)' }}>
-										Our team will be in touch within 1 business day.
+										This example does not send messages. Connect an email service to receive enquiries.
 									</p>
 								</div>
 							) : (
