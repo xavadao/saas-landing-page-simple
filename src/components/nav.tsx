@@ -31,6 +31,31 @@ export function Nav() {
 		setScrolled(false);
 	}, [pathname]);
 
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const toggle = document.getElementById('nexus-menu-toggle');
+    const links = [...document.querySelectorAll<HTMLAnchorElement>('#nexus-mobile-menu a')];
+    const focusable = [toggle, ...links].filter((element): element is HTMLElement => element instanceof HTMLElement);
+    links[0]?.focus();
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setMenuOpen(false);
+      if (event.key !== 'Tab' || !focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', onKeyDown);
+      if (toggle?.isConnected) toggle.focus();
+    };
+  }, [menuOpen]);
+
 	return (
 		<>
 			<nav
@@ -107,7 +132,11 @@ export function Nav() {
 						<button
 							className="lg:hidden flex flex-col gap-1.5 p-2"
 							onClick={() => setMenuOpen(!menuOpen)}
-							aria-label="Toggle menu"
+							id="nexus-menu-toggle"
+          aria-label="Toggle menu"
+              aria-expanded={menuOpen}
+              aria-controls="nexus-mobile-menu"
+              type="button"
 						>
 							<span
 								className="block w-6 h-0.5 bg-white transition-all duration-300"
@@ -128,7 +157,10 @@ export function Nav() {
 
 			{/* Mobile menu */}
 			<div
-				className="fixed inset-0 z-40 lg:hidden transition-all duration-300"
+				id="nexus-mobile-menu"
+        aria-hidden={!menuOpen}
+        inert={!menuOpen}
+        className="fixed inset-0 z-40 lg:hidden overflow-y-auto overscroll-contain transition-all duration-300"
 				style={{
 					opacity: menuOpen ? 1 : 0,
 					pointerEvents: menuOpen ? 'all' : 'none',

@@ -49,7 +49,7 @@ export default function ContactPage() {
 		<>
 			<ScrollRevealInit />
 			<Nav />
-			<main>
+			<main id="main-content" tabIndex={-1}>
 				{/* Hero */}
 				<section
 					className="relative pt-40 pb-16 overflow-hidden grid-overlay"
@@ -132,7 +132,7 @@ export default function ContactPage() {
 						{/* Guided form — open, no heavy container */}
 						<div className="max-w-xl mx-auto pb-16">
 							{submitted ? (
-								<div className="text-center py-16">
+								<div className="text-center py-16" role="status" aria-live="polite">
 									<div
 										className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
 										style={{ background: 'rgba(34,197,94,0.08)', border: '1px solid rgba(34,197,94,0.25)' }}
@@ -175,7 +175,8 @@ export default function ContactPage() {
 												style={{ fontSize: '1.05rem', padding: '8px 0', caretColor: '#f5c518' }}
 												onFocus={(e) => { (e.target.parentElement as HTMLElement).style.borderBottomColor = 'rgba(245,197,24,0.6)'; }}
 												onBlur={(e) => { (e.target.parentElement as HTMLElement).style.borderBottomColor = 'rgba(255,255,255,0.1)'; }}
-												placeholder="What's your name?"
+												aria-label="Name" name="name" autoComplete="name"
+                        placeholder="What's your name?"
 											/>
 										</div>
 
@@ -190,7 +191,8 @@ export default function ContactPage() {
 												style={{ fontSize: '1.05rem', padding: '8px 0', caretColor: '#f5c518' }}
 												onFocus={(e) => { (e.target.parentElement as HTMLElement).style.borderBottomColor = 'rgba(245,197,24,0.6)'; }}
 												onBlur={(e) => { (e.target.parentElement as HTMLElement).style.borderBottomColor = 'rgba(255,255,255,0.1)'; }}
-												placeholder="Work email"
+												aria-label="Work email" name="email" autoComplete="email" inputMode="email" spellCheck={false}
+                        placeholder="Work email"
 											/>
 										</div>
 
@@ -205,11 +207,12 @@ export default function ContactPage() {
 													style={{ fontSize: '1.05rem', padding: '8px 0', caretColor: '#f5c518' }}
 													onFocus={(e) => { (e.target.parentElement as HTMLElement).style.borderBottomColor = 'rgba(245,197,24,0.6)'; }}
 													onBlur={(e) => { (e.target.parentElement as HTMLElement).style.borderBottomColor = 'rgba(255,255,255,0.1)'; }}
-													placeholder="Company"
+													aria-label="Company" name="company" autoComplete="organization"
+                        placeholder="Company"
 												/>
 											</div>
 											<div style={{ borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '20px', transition: 'border-color 0.2s' }}>
-												<select
+												<select aria-label="Team size" name="teamSize"
 													value={formData.teamSize}
 													onChange={(e) => setFormData({ ...formData, teamSize: e.target.value })}
 													className="w-full bg-transparent outline-none appearance-none cursor-pointer"
@@ -241,7 +244,8 @@ export default function ContactPage() {
 												style={{ fontSize: '1.05rem', padding: '8px 0', caretColor: '#f5c518' }}
 												onFocus={(e) => { (e.target.parentElement as HTMLElement).style.borderBottomColor = 'rgba(245,197,24,0.6)'; }}
 												onBlur={(e) => { (e.target.parentElement as HTMLElement).style.borderBottomColor = 'rgba(255,255,255,0.1)'; }}
-												placeholder="Tell us about your use case…"
+												aria-label="Message" name="message"
+                        placeholder="Tell us about your use case…"
 											/>
 										</div>
 

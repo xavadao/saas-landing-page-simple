@@ -273,10 +273,11 @@ export function HeroSection() {
 					</div>
 
 					{/* Headline — oversized, tight, commanding */}
-					<h1
-						className="font-black animate-fade-up"
+					<h1 aria-label="The Intelligence Platform Built to Scale.">
+						<span
+						className="block font-black animate-fade-up"
 						style={{
-							fontSize: 'clamp(3.5rem, 8.5vw, 7.5rem)',
+							fontSize: 'clamp(2.3rem, 8.5vw, 7.5rem)',
 							lineHeight: '0.92',
 							letterSpacing: '-0.04em',
 							color: '#ffffff',
@@ -287,11 +288,11 @@ export function HeroSection() {
 						}}
 					>
 						The
-					</h1>
-					<h1
-						className="font-black animate-fade-up"
+						</span>{' '}
+						<span
+						className="block font-black animate-fade-up"
 						style={{
-							fontSize: 'clamp(3.5rem, 8.5vw, 7.5rem)',
+							fontSize: 'clamp(2.3rem, 8.5vw, 7.5rem)',
 							lineHeight: '0.92',
 							letterSpacing: '-0.04em',
 							marginBottom: '0.15em',
@@ -300,17 +301,17 @@ export function HeroSection() {
 							animationDelay: '0.18s',
 						}}
 					>
-						<span style={{
+							<span style={{
 							color: '#f5c518',
 							textShadow: '0 0 80px rgba(245,197,24,0.3)',
 						}}>
 							Intelligence
-						</span>
-					</h1>
-					<h1
-						className="font-black animate-fade-up"
+							</span>
+						</span>{' '}
+						<span
+						className="block font-black animate-fade-up"
 						style={{
-							fontSize: 'clamp(3.5rem, 8.5vw, 7.5rem)',
+							fontSize: 'clamp(2.3rem, 8.5vw, 7.5rem)',
 							lineHeight: '0.92',
 							letterSpacing: '-0.04em',
 							color: '#ffffff',
@@ -321,11 +322,11 @@ export function HeroSection() {
 						}}
 					>
 						Platform
-					</h1>
-					<h1
-						className="font-black animate-fade-up"
+						</span>{' '}
+						<span
+						className="block font-black animate-fade-up"
 						style={{
-							fontSize: 'clamp(3.5rem, 8.5vw, 7.5rem)',
+							fontSize: 'clamp(2.3rem, 8.5vw, 7.5rem)',
 							lineHeight: '0.92',
 							letterSpacing: '-0.04em',
 							color: 'rgba(255,255,255,0.35)',
@@ -336,6 +337,8 @@ export function HeroSection() {
 						}}
 					>
 						Built to Scale.
+						</span>
+
 					</h1>
 
 					{/* Supporting paragraph */}

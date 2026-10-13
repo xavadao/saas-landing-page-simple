@@ -17,7 +17,7 @@ export default function HomePage() {
 		<>
 			<ScrollRevealInit />
 			<Nav />
-			<main>
+			<main id="main-content" tabIndex={-1}>
 				{/* 1. Hero — cinematic, editorial */}
 				<HeroSection />
 

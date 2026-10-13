@@ -34,7 +34,7 @@ export default function CareersPage() {
 		<>
 			<ScrollRevealInit />
 			<Nav />
-			<main>
+			<main id="main-content" tabIndex={-1}>
 				{/* Hero */}
 				<section
 					className="relative pt-40 pb-24 overflow-hidden grid-overlay"

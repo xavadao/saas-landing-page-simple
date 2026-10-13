@@ -77,7 +77,7 @@ export default function ResourcesPage() {
 		<>
 			<ScrollRevealInit />
 			<Nav />
-			<main>
+			<main id="main-content" tabIndex={-1}>
 				{/* Hero — cinematic full-bleed */}
 				<section className="relative w-full overflow-hidden" style={{ height: '100vh', minHeight: '640px', maxHeight: '900px' }}>
 

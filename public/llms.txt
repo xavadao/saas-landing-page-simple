@@ -1,0 +1,21 @@
+# Nexus Intelligence Platform
+
+> Explore a black-and-gold SaaS marketing demo with product, industry, company, resource, and demo enquiry pages. Built with XavaInf.
+
+## About this demonstration
+
+This is a fictional marketing demonstration. Forms and prices do not create accounts, messages, subscriptions, orders, or payments.
+
+## Pages
+
+- [Nexus Intelligence Platform — SaaS Website Demo](https://vibed-saas-simple.xavainf.com/): Explore a black-and-gold SaaS marketing demo with product, industry, company, resource, and demo enquiry pages. Built with XavaInf.
+- [Products — Nexus SaaS Demo](https://vibed-saas-simple.xavainf.com/products): Explore the fictional Nexus product suite and illustrated workflow features in this interactive SaaS website demo.
+- [Industries — Nexus SaaS Demo](https://vibed-saas-simple.xavainf.com/industries): Browse example Nexus use cases for different industries. The content illustrates a fictional SaaS marketing website.
+- [Resources — Nexus SaaS Demo](https://vibed-saas-simple.xavainf.com/resources): Browse example guides and resource cards for the fictional Nexus intelligence platform.
+- [Careers — Nexus SaaS Demo](https://vibed-saas-simple.xavainf.com/careers): Explore sample team values and career listings in the Nexus SaaS website demo. These are illustrative roles.
+- [About — Nexus SaaS Demo](https://vibed-saas-simple.xavainf.com/about): Meet the fictional Nexus team and explore its example company story, values, and milestones.
+- [Demo Enquiry — Nexus SaaS Demo](https://vibed-saas-simple.xavainf.com/contact): Try the Nexus enquiry form and its local confirmation state. This example does not send messages or create an account.
+
+## Creator
+
+Made with [XavaInf](https://xavainf.com).
