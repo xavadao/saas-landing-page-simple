@@ -4,6 +4,8 @@ A polished, multi-page SaaS marketing example for the fictional Nexus intelligen
 
 Live demo: [https://vibed-saas-simple.xavainf.com](https://vibed-saas-simple.xavainf.com)
 
+Source: [View source on GitHub](https://github.com/xavadao/saas-landing-page-simple). This open-source website example is published for community review and development.
+
 ## Features
 
 - Responsive navigation and marketing sections
@@ -12,7 +14,7 @@ Live demo: [https://vibed-saas-simple.xavainf.com](https://vibed-saas-simple.xav
 
 ## Search and accessibility
 
-Every page includes a keyboard-accessible “Made with XavaInf” credit, descriptive page metadata, a canonical URL, and social preview metadata. `robots.txt`, `sitemap.xml`, and `llms.txt` describe the published demo routes and limitations. Structured data identifies the site as a creative demonstration, without product ratings or customer claims. Mobile navigation supports Escape, focus handling, and reduced motion.
+Every page includes a fixed bottom-right, keyboard-accessible “Made with XavaInf” badge linking to https://xavainf.com and a visible “View source on GitHub” footer link. The badge stays in place while scrolling, with safe-area spacing and footer clearance; demo disclosures remain in the page flow. Pages also include descriptive page metadata, a canonical URL, and social preview metadata. `robots.txt`, `sitemap.xml`, and `llms.txt` describe the published demo routes and limitations. Structured data identifies the site as a creative demonstration, without product ratings or customer claims. Mobile navigation supports Escape, focus handling, and reduced motion.
 
 ## Run locally
 
@@ -52,3 +54,7 @@ Source pages and components live in `src/`; bundled assets live in `public/`. Ge
 ## Demo limitations
 
 The contact form shows a local confirmation only; it does not send messages. Product statistics, testimonials, pricing, resources, and career listings are example content.
+
+## License
+
+Authored project source is available under the [MIT License](LICENSE). Third-party images, fonts, dependencies, and other materials retain their respective terms; see [Third-party notices](THIRD_PARTY_NOTICES.md).
