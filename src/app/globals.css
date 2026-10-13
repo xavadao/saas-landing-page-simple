@@ -464,3 +464,9 @@ h1, h2, h3, [id] { scroll-margin-top: 6rem; }
 
 /* Contain decorative SVG and card transforms at the page boundary. */
 main { overflow-x: clip; }
+
+/* Yield the floating credit while the full-screen mobile menu owns the controls. */
+body:has(#nexus-mobile-menu[aria-hidden="false"]) .example-credit-link {
+  visibility: hidden;
+  pointer-events: none;
+}
