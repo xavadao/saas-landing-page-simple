@@ -389,7 +389,7 @@ export function HeroSection() {
 							{ value: '10,000+', label: 'Teams worldwide' },
 							{ value: '99.9%', label: 'Uptime SLA' },
 							{ value: '4.9 / 5', label: 'Customer rating' },
-						].map((stat, i) => (
+						].map((stat) => (
 							<div key={stat.label} className="flex items-baseline gap-2">
 								<span
 									className="font-black"
